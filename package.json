@@ -1,0 +1,24 @@
+{
+  "name": "tidio-recruitment-task",
+  "version": "1.0.0",
+  "author": "Renata",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^9.1.0",
+    "dotenv": "16.4.5",
+    "playwright": "^1.48.2",
+    "typescript": "5.6.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.2",
+    "@tsconfig/recommended": "1.0.7",
+    "@types/node": "22.7.7"
+  },
+  "scripts": {
+    "test-headless": "playwright test",
+    "test-inspector": "playwright test --debug",
+    "test-ui": "playwright test --headed",
+    "test-in-docker": "docker build -t playwright-tests . && docker run -it --rm playwright-tests"
+  },
+  "repository": "git@github.com:yellowee/tidio-recruitment.git"
+}
